@@ -1,4 +1,4 @@
-package smartpark.model.VehicleType;
+package com.model;
 
 public class Vehicle{
     public String licensePlate;
