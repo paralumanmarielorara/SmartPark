@@ -1,27 +1,55 @@
 # SmartPark - Project Status
 
 **Import Date**: October 22, 2025  
-**Source**: https://github.com/paralumanmarielorara/SmartPark
+**Source**: https://github.com/paralumanmarielorara/SmartPark  
+**Last Updated**: October 22, 2025
 
 ## Overview
-This is a GitHub import from the SmartPark repository. The repository currently contains only a README file with the project title "SmartPark". There is no application code, build configuration, or project files present.
+SmartPark is a parking lot management system built with Java. The system provides functionality for managing parking lots, vehicles, and vehicle types.
 
 ## Current State
-- **Status**: Empty repository (README only)
-- **Languages**: None detected
-- **Framework**: None detected
-- **Dependencies**: None
+- **Status**: Running successfully ✓
+- **Language**: Java 17
+- **Build System**: Maven (with direct javac compilation)
+- **Workflow**: Configured and running
 
 ## Project Architecture
-The repository contains:
-- `README.md`: Basic project title only
+
+### Directory Structure
+```
+src/
+  main/
+    java/
+      com/
+        Main.java - Main application entry point
+        model/
+          ParkingLot.java - Parking lot data model
+          Vehicle.java - Vehicle data model
+          VehicleType.java - Vehicle type enumeration (CAR, MOTORCYCLE, TRUCK)
+```
+
+### Key Components
+1. **ParkingLot Model**: Manages parking lot information including ID, location, capacity, and occupied spaces
+2. **Vehicle Model**: Tracks vehicle information including license plate, type, and owner
+3. **VehicleType Enum**: Defines supported vehicle types (CAR, MOTORCYCLE, TRUCK)
+4. **Main Application**: Demonstrates the parking system with sample data
+
+## Technical Setup
+- **Java Version**: JDK 17
+- **Build Tools**: Maven, javac
+- **Compilation**: Direct Java compilation to `target/classes`
+- **Workflow**: Compiles all Java files and runs the Main class
+
+## Recent Changes
+- Added Java model classes for parking lot management
+- Created Main.java application entry point
+- Configured Maven build system (pom.xml)
+- Set up workflow for compilation and execution
+- Installed Java 17 and Maven dependencies
+- Added .gitignore for Java projects
 
 ## Next Steps
-To develop this project, you would need to:
-1. Decide on the technology stack (e.g., web app, mobile app, backend API)
-2. Initialize the project with appropriate package managers and build tools
-3. Add application code
-4. Configure deployment settings
-
-## Notes
-This appears to be a freshly initialized GitHub repository that hasn't had any code committed yet. The project is ready for initial development.
+- Expand functionality with parking space allocation logic
+- Add database integration for persistent storage
+- Implement REST API endpoints
+- Add user interface (web or CLI)

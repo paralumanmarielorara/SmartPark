@@ -1,5 +1,30 @@
+modules = ["java"]
 [agent]
 expertMode = true
 
 [nix]
 channel = "stable-25_05"
+packages = ["jdk17", "maven"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "SmartPark"
+
+[[workflows.workflow]]
+name = "SmartPark"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "javac -d target/classes src/main/java/com/*.java src/main/java/com/model/*.java && java -cp target/classes com.Main"
+
+[workflows.workflow.metadata]
+outputType = "console"
